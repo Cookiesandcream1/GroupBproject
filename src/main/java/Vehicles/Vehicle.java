@@ -15,4 +15,9 @@ public class Vehicle implements RideAble,NoiseMaker{
     public void dismount() {
         System.out.println("Dismounting Vehicle");
     }
+
+    @Override
+    public void ride() {
+        System.out.println("riding vehicle");
+    }
 }

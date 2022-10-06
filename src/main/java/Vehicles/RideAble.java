@@ -5,4 +5,7 @@ public interface RideAble {
 
     void dismount();
 
+    void ride();
+
+
 }

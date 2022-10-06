@@ -2,7 +2,7 @@ package Vehicles;
 
 import Produce.CropRow;
 
-public class CropDuster implements FlyAble{
+public class CropDuster extends FarmingVehicles implements FlyAble{
 
     public CropRow[][] fertilize(CropRow[][] cropRowss){
         return cropRowss;
@@ -13,5 +13,7 @@ public class CropDuster implements FlyAble{
     @Override
     public void fly() {
         System.out.println("Crop duster flying");
+
+        ///Shawn class
     }
 }
