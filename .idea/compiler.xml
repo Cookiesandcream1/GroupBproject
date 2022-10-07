@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="GroupBproject" />
         <module name="groupBFarmerFroilan" />
+        <module name="OfficialGroupB" />
       </profile>
     </annotationProcessing>
   </component>
