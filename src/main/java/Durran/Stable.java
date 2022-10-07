@@ -4,5 +4,5 @@ import Durran.Farm;
 
 public class Stable extends Farm {
 
-    public Horse[] horses;
+//    public Horse[] horses;
 }
