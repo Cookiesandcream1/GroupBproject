@@ -1,4 +1,4 @@
-package emilyandjoe;
+package isaiahandjoe;
 
 public interface Botanist {
     //botanist can plant Crop in a CropRow

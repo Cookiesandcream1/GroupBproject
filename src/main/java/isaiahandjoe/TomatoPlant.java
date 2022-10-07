@@ -1,4 +1,4 @@
-package emilyandjoe;
+package isaiahandjoe;
 
 public class TomatoPlant extends Crop { //TomatoPlant is a Crop
     //Declared a tomato variable to store Tomato class
