@@ -1,9 +1,9 @@
 package Vehicles;
 
-import Produce.Crop;
+//import Produce.Crop;
 
 public class Tractor extends FarmingVehicles{
-    public Crop harvest(Crop crop){
-        return crop;
-    }
+//    public Crop harvest(Crop crop){
+//        return crop;
+//    }
 }
