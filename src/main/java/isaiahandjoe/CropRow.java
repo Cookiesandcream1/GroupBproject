@@ -1,5 +1,6 @@
 package isaiahandjoe;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 public class CropRow {
@@ -10,4 +11,8 @@ public class CropRow {
         cropRow.add(crop);
     }
 
+=======
+public class CropRow {
+    private Crop[] crops;
+>>>>>>> abbf4643c4822330c97ec6f3f6d71e5cb2b73083
 }

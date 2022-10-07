@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         BontanistTest one = new BontanistTest();
         Crop cropOne = new TomatoPlant();
+<<<<<<< HEAD
 //        one.plant();
         Crop cropTwo = new Cornstalk();
 //        one.plant(cropTwo);
@@ -20,5 +21,10 @@ Crop is a Produce which can yield an Edible(interface )object depending on its h
 Cornstalk is a Crop which can yield a EarCorn
 Tomatoplant is a Crop which can yield a Tomato
         */
+=======
+        one.plant(cropOne);
+        Crop cropTwo = new Cornstalk();
+        one.plant(cropTwo);
+>>>>>>> abbf4643c4822330c97ec6f3f6d71e5cb2b73083
     }
 }
