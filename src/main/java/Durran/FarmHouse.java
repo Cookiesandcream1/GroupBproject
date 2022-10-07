@@ -1,8 +1,18 @@
 package Durran;
 
 import Durran.Farm;
+import Saad.Person;
 
 public class FarmHouse extends Farm {
 
-    public Person[] People;
+    private Person [] people;
+
+    public Person[] getPeople() {
+        return people;
+    }
+
+    public void setPeople(Person[] people) {
+        this.people = people;
+    }
 }
+
