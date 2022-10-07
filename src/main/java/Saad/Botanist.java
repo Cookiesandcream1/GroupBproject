@@ -1,6 +1,14 @@
 package Saad;
 
+import emily.Crop;
+import emily.CropRow;
+
 public class Botanist extends Person{
 
-    public 
+    public void plantCrop(Crop crop, CropRow cropRow){
+
+
+    }
+
+
 }
