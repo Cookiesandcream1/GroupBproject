@@ -1,4 +1,4 @@
-package emily;
+package isaiahandjoe;
 
 public interface IEdible {
 }
