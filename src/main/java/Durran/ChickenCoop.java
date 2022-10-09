@@ -6,9 +6,10 @@ public class ChickenCoop extends Stable {
 
     private Chicken[] allDeezChickens;
 
-    public ChickenCoop(Chicken[] allDeezChickens) {
-        this.allDeezChickens = allDeezChickens;
+    public ChickenCoop(Stable[] stables) {
+        super(stables);
     }
+
 
     public Chicken[] getAllDeezChickens() {
         return allDeezChickens;

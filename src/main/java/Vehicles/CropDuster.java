@@ -4,7 +4,7 @@ import Produce.CropRow;
 
 public class CropDuster extends FarmingVehicles implements FlyAble{
 
-    public CropRow[][] fertilize(CropRow[][] cropRowss){
+    public CropRow[][][][][] fertilize(CropRow[][][][][] cropRowss){
         return cropRowss;
     }
 
