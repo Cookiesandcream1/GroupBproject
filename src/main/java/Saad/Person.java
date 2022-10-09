@@ -1,7 +1,9 @@
 package Saad;
 
-public abstract class Person{
+import jared.Eater;
+
+public abstract class Person implements Eater {
     private String name;
-    public field;
+    //public field;
 
 }

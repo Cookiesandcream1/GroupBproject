@@ -1,6 +1,6 @@
 package Vehicles;
 
-public abstract class FarmingVehicles extends Vehicle {
+public class FarmingVehicles extends Vehicle {
     public boolean canOperate(Vehicle vehicle) {
         boolean bool = false;
         if (vehicle instanceof CropDuster) {
@@ -11,6 +11,13 @@ public abstract class FarmingVehicles extends Vehicle {
             return false;
         }
         return bool;
+    }
+
+    public static void main(String[] args) {
+        FarmingVehicles farmingVehicles = new FarmingVehicles();
+
+        farmingVehicles.canOperate(farmingVehicles);
+
     }
 }
 

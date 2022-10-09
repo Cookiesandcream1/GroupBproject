@@ -1,5 +1,10 @@
 package jared;
 
-public interface Eater {
-    void eat(Edible edible); // will remove edible obj
+import emily.Crop;
+
+import java.util.ArrayList;
+
+public interface Eater extends Eat{
+     // will remove edible obj
+
 }
