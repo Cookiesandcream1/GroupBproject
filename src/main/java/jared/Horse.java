@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class Horse extends Animal implements RideAble {
+public class Horse extends Animal implements RideAble, Eater {
     @Override
     public void MakeNoise() {
         System.out.println("Horse noise");

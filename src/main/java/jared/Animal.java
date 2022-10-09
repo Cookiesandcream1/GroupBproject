@@ -27,3 +27,9 @@ public  abstract class Animal implements Eater, NoiseMaker {
         }
     }
 
+<<<<<<< HEAD
+=======
+public abstract class Animal implements Eater, NoiseMaker {
+
+}
+>>>>>>> ec20db5b35926f2b6cee1a0951460aaa61b9e760

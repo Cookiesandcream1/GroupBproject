@@ -1,5 +1,6 @@
 package jared;
 
+<<<<<<< HEAD
 import emily.Crop;
 
 import java.util.ArrayList;
@@ -8,6 +9,10 @@ import java.util.Iterator;
 
 public class Chicken extends Animal implements Edible, Produce,Eater {
 
+=======
+public class Chicken extends Animal implements Edible, Produce {
+Egg egg;
+>>>>>>> ec20db5b35926f2b6cee1a0951460aaa61b9e760
 
     @Override
     public void MakeNoise() {
@@ -31,6 +36,18 @@ public class Chicken extends Animal implements Edible, Produce,Eater {
     @Override
     public boolean isEdible() {
         return true;
+    }
+
+    @Override
+    public Produce yeilds(Edible edibleobj) {
+        if (egg.isHasBeenFertilized() == false){
+            Egg edibleEgg = new Egg();
+        } else {
+            System.out.println("This egg is not edible");
+        }
+
+        //creates an egg object if hasbeenferitlized = false
+        return egg;
     }
 }
 
