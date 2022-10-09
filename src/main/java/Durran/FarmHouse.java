@@ -1,8 +1,13 @@
 package Durran;
 
-import Durran.Farm;
+import Saad.Person;
 
 public class FarmHouse extends Farm {
+    public FarmHouse(Person[] people) {
+        super(people);
+    }
 
-    public Person[] People;
-}
+
+    }
+
+
