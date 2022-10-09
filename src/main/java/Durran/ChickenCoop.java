@@ -2,20 +2,20 @@ package Durran;
 
 import jared.Chicken;
 
-public class ChickenCoop extends Stable {
+public class ChickenCoop extends Farm {
 
-    private Chicken[] allDeezChickens;
+private Chicken [] chickens;
 
-    public ChickenCoop(Stable[] stables) {
-        super(stables);
+    public Chicken[] getChickens() {
+        return chickens;
     }
 
-
-    public Chicken[] getAllDeezChickens() {
-        return allDeezChickens;
+    public void setChickens(Chicken[] chickens) {
+        this.chickens = chickens;
     }
 
-    public void setAllDeezChickens(Chicken[] allDeezChickens) {
-        this.allDeezChickens = allDeezChickens;
+    public ChickenCoop(Stable[] stables, ChickenCoop[] chickenCoops) {
+        super(stables, chickenCoops);
     }
 }
+

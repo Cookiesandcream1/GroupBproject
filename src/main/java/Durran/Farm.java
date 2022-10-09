@@ -18,9 +18,9 @@ public abstract class Farm {
 
     private Person[] people;
 
-    private Field[] fields;
+    private Field fields;
 
-    private Crop[][][][][][] crops;
+    private Crop[][] crops;
 
     private FarmingVehicles[] farmingVehicles;
 
@@ -30,7 +30,7 @@ public abstract class Farm {
 
     private CropDuster cropDuster;
 
-    public Farm(FarmHouse farmHouse, Stable[] stables, ChickenCoop[] chickenCoops, Person[] people, Field[] fields, Crop[][][][][][] crops, FarmingVehicles[] farmingVehicles, AirCraft airCraft, Pilot pilot, CropDuster cropDuster) {
+    public Farm(FarmHouse farmHouse, Stable[] stables, ChickenCoop[] chickenCoops, Person[] people, Field fields, Crop[][] crops, FarmingVehicles[] farmingVehicles, AirCraft airCraft, Pilot pilot, CropDuster cropDuster) {
         this.farmHouse = farmHouse;
         this.stables = stables;
         this.chickenCoops = chickenCoops;
@@ -41,6 +41,19 @@ public abstract class Farm {
         this.airCraft = airCraft;
         this.pilot = pilot;
         this.cropDuster = cropDuster;
+    }
+
+    public Farm(Stable[] stables) {
+        this.stables = stables;
+    }
+
+    public Farm(Person[] people) {
+        this.people = people;
+    }
+
+    public Farm(Stable[] stables, ChickenCoop[] chickenCoops) {
+        this.stables = stables;
+        this.chickenCoops = chickenCoops;
     }
 
     public FarmHouse getFarmHouse() {
@@ -75,19 +88,19 @@ public abstract class Farm {
         this.people = people;
     }
 
-    public Field[] getFields() {
+    public Field getFields() {
         return fields;
     }
 
-    public void setFields(Field[] fields) {
+    public void setFields(Field fields) {
         this.fields = fields;
     }
 
-    public Crop[][][][][][] getCrops() {
+    public Crop[][] getCrops() {
         return crops;
     }
 
-    public void setCrops(Crop[][][][][][] crops) {
+    public void setCrops(Crop[][] crops) {
         this.crops = crops;
     }
 
