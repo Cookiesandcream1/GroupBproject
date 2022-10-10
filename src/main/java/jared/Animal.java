@@ -1,7 +1,7 @@
 package jared;
 
 import Vehicles.NoiseMaker;
-import emily.Crop;
+import isaiahandjoe.Crop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public  abstract class Animal implements Eater, NoiseMaker {
 
     @Override
     public void MakeNoise() {
-
+        System.out.println("animal make noise");
     }
 
 
@@ -27,9 +27,3 @@ public  abstract class Animal implements Eater, NoiseMaker {
         }
     }
 
-<<<<<<< HEAD
-=======
-public abstract class Animal implements Eater, NoiseMaker {
-
-}
->>>>>>> ec20db5b35926f2b6cee1a0951460aaa61b9e760

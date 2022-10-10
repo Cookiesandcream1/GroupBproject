@@ -1,10 +1,22 @@
 package Durran;
 
+import Produce.Egg;
 import jared.Chicken;
 
-public class ChickenCoop extends Farm {
+import java.util.Arrays;
 
-private Chicken [] chickens;
+public class ChickenCoop {
+    private Chicken[] chickens;
+
+
+
+    public ChickenCoop( int numberOfChickens) {
+        chickens = new Chicken[numberOfChickens];
+        for (int i = 0; i < numberOfChickens; i++) {
+            chickens[i] = new Chicken(new Egg(true));
+        }
+
+    }
 
     public Chicken[] getChickens() {
         return chickens;
@@ -14,8 +26,11 @@ private Chicken [] chickens;
         this.chickens = chickens;
     }
 
-    public ChickenCoop(Stable[] stables, ChickenCoop[] chickenCoops) {
-        super(stables, chickenCoops);
+    @Override
+    public String toString() {
+        return "ChickenCoop " +
+                "chickens: " + '\n' +  Arrays.toString(chickens) ;
     }
 }
+
 

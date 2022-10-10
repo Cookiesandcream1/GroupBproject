@@ -1,15 +1,11 @@
 package jared;
 
-<<<<<<< HEAD
-import emily.Crop;
+
+import isaiahandjoe.Crop;
 
 import java.util.ArrayList;
 
-public interface Eater extends Eat{
+public interface Eater{
      // will remove edible obj
-
-=======
-public interface Eater {
-    void eat(Edible edible); // should remove edible obj
->>>>>>> ec20db5b35926f2b6cee1a0951460aaa61b9e760
+     void eat(ArrayList<Crop[]> crops, Eater eater);
 }

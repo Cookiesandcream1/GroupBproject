@@ -1,16 +1,26 @@
 package jared;
 
+import Vehicles.NoiseMaker;
 import Vehicles.RideAble;
-import emily.Crop;
+import isaiahandjoe.Crop;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class Horse extends Animal implements RideAble, Eater {
-    @Override
-    public void MakeNoise() {
-        System.out.println("Horse noise");
+public class Horse extends Animal implements RideAble, Edible, NoiseMaker {
+    private char sex;
+
+    public Horse(char sex) {
+        this.sex = sex;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
     }
 
     @Override
@@ -20,14 +30,35 @@ public class Horse extends Animal implements RideAble, Eater {
 
     @Override
     public void dismount() {
-        System.out.println("dismounting horse");
+        System.out.println("Dismounting horse");
+
     }
+
+
 
     @Override
     public void ride() {
-        System.out.println("riding horse");
-        // horse ride
+
     }
+
+   // @Override
+    public void eat(Edible edible) {
+
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Horse noises";
+    }
+
+    @Override
+    public String toString() {
+        return "Horse{" +
+                "sex=" + sex +
+                '}';
+    }
+
+
 
 
         // removes edible obj
@@ -44,5 +75,9 @@ public class Horse extends Animal implements RideAble, Eater {
         }
 
 
+    @Override
+    public boolean isEdible() {
+        return false;
+    }
 }
 
