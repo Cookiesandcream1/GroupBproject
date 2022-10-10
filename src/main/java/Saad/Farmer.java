@@ -1,30 +1,47 @@
 package Saad;
 
+import Durran.Farm;
+import Saad.Botanist;
+import Saad.Rider;
 import Vehicles.NoiseMaker;
-import emily.Crop;
-import emily.CropRow;
+import Vehicles.RideAble;
+import Vehicles.Vehicle;
 import jared.Eater;
-import jared.Edible;
 
-public class Farmer extends Person implements Eater, NoiseMaker,Rider, Botanist {
-
+public class Farmer extends Botanist implements Rider, Eater, NoiseMaker {
+    Vehicle vehicle;
+    Farm farm;
+    private boolean isMounted = false;
 
     public Farmer(String name) {
         super(name);
     }
 
+
+    public boolean getIsMounted() {
+        return isMounted;
+    }
+
+    public void setMounted(boolean mounted) {
+        isMounted = mounted;
+    }
+
+
     @Override
-    public void MakeNoise() {
-        System.out.println("GIDDY UP COWBOY");
+    public void mount(RideAble ride) {
+        if (vehicle instanceof RideAble) {
+            System.out.println("Mounting..");
+            setMounted(true);
+        }
+        else if (!(vehicle instanceof RideAble)){
+            System.out.println("Not rideable");
+
+        }
     }
 
     @Override
-    public void eat(Edible edible) {
-
-    }
-
-    @Override
-    public void plant(Crop crop, CropRow cropRow) {
-        cropRow.addCrop(crop);
+    public void dismount() {
+        System.out.println("Dismounting..");
+        setMounted(false);
     }
 }

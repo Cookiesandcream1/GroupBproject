@@ -1,13 +1,29 @@
 package Saad;
 
-import emily.Crop;
-import emily.CropRow;
+import isaiahandjoe.Crop;
+import isaiahandjoe.CropRow;
+import jared.Edible;
 
-<<<<<<< HEAD
-public interface Botanist {
+public class Botanist extends Person {
+    public Botanist(String name) {
+        super(name);
+    }
 
-    void plant(Crop crop, CropRow cropRow);
-=======
-    public
->>>>>>> main
+    @Override
+    public void eat(Edible edible) {
+
+    }
+
+
+    public CropRow plantCropInCropRow(Crop croptype, int numberOfCrops){
+        CropRow cropRow = new CropRow(croptype, numberOfCrops);
+
+        return cropRow;
+
+    }
+
+    @Override
+    public void MakeNoise() {
+        System.out.println("Botanist Noises");
+    }
 }

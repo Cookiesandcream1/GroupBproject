@@ -1,7 +1,13 @@
 package Saad;
 
-public interface Rider {
-    //rider can moount and disomout a rideable object
+import Vehicles.RideAble;
+import jared.Edible;
 
+public interface Rider {
+
+
+    void mount(RideAble ride);
+
+    void dismount();
 
 }
