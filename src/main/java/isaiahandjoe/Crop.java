@@ -1,16 +1,48 @@
 package isaiahandjoe;
 
-<<<<<<< HEAD
-public abstract class Crop{
-    //botanist can plant a crop in a croprow
+public abstract class Crop implements Produce {
+    private String cropType;
+    private boolean hasBeenHarvested;
+    private boolean hasBeenFertilized;
 
+    public Crop(boolean hasBeenHarvested, boolean hasBeenFertilized) {
+        this.hasBeenHarvested = false;
+        this.hasBeenFertilized = false;
+    }
 
+    protected Crop() {
+    }
 
-=======
-public abstract class Crop extends ProduceTest {
-    //crop can produce edible object if harvest and fertilized
-//    public  yield(){
-//        //if statement to return if harvested and fertilized
-//    }
->>>>>>> abbf4643c4822330c97ec6f3f6d71e5cb2b73083
+    public boolean isHasBeenHarvested() {
+        return hasBeenHarvested;
+    }
+
+    public void setHasBeenHarvested(boolean hasBeenHarvested) {
+        this.hasBeenHarvested = hasBeenHarvested;
+    }
+
+    public boolean isHasBeenFertilized() {
+        return hasBeenFertilized;
+    }
+
+    public void setHasBeenFertilized(boolean hasBeenFertilized) {
+        this.hasBeenFertilized = hasBeenFertilized;
+    }
+
+    public String getCropType() {
+        return cropType;
+    }
+
+    public void setCropType(String cropType) {
+        this.cropType = cropType;
+    }
+
+    @Override
+    public String toString() {
+        return "Crop{" +
+                "cropType='" + cropType + '\'' +
+                ", hasBeenHarvested=" + hasBeenHarvested +
+                ", hasBeenFertilized=" + hasBeenFertilized +
+                '}';
+    }
 }

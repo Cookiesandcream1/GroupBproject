@@ -1,8 +1,7 @@
 package isaiahandjoe;
 
+import jared.Edible;
 
 public interface Produce {
-
-    public Edible yield();
-
+    Edible yields();
 }

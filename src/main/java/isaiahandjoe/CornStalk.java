@@ -1,22 +1,29 @@
 package isaiahandjoe;
 
+
 import jared.Edible;
 
-public class TomatoPlant extends Crop implements Produce{
-    Tomato tomato;
-    private String cropType = "Tomato Plant";
-
-
+public class CornStalk extends Crop implements Produce{
+    EarCorn earcorn;
+    private String cropType = "Corn Stalk";
+    private boolean hasBeenHarvested;
+    private boolean hasBeenFertilized;
 
     @Override
     public Edible yields() {
-        Tomato tomato = new Tomato(true,true);
-        return tomato;
+        EarCorn earcorn = new EarCorn(true, true);
+        return earcorn;
+
+
+
+
+
+        //return earcorn; //can yeild an edible earcorn object
     }
 
     @Override
     public boolean isHasBeenHarvested() {
-        return super.isHasBeenHarvested();
+        return hasBeenHarvested;
     }
 
     @Override
@@ -26,7 +33,7 @@ public class TomatoPlant extends Crop implements Produce{
 
     @Override
     public boolean isHasBeenFertilized() {
-        return super.isHasBeenFertilized();
+        return hasBeenFertilized;
     }
 
     @Override
@@ -43,7 +50,6 @@ public class TomatoPlant extends Crop implements Produce{
     public void setCropType(String cropType) {
         super.setCropType(cropType);
     }
-
 
     @Override
     public String toString() {

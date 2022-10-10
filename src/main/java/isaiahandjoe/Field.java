@@ -1,20 +1,47 @@
 package isaiahandjoe;
 
-<<<<<<< HEAD
-import java.util.ArrayList;
+import jared.Edible;
 
-public class Field {
-    private ArrayList<CropRow> field;
+import java.util.Arrays;
 
-//    public void add(CropRow cropRow){
-//        this.field = new ArrayList<>(CropRow);
-//
+public class Field extends Crop {
+    CropRow[] cropRows;
+    Crop crops;
+    Crop[][] fieldRows;
+
+    public Field(int numberOfRows, int numberOfColumns, CropRow... cropRows) {
+        fieldRows = new Crop[numberOfRows][numberOfColumns];
+
+        for (int x = 0; x < cropRows.length; x++) {
+            System.out.println("ROW" + x + "\n");
+            for (int i = 0; i < numberOfColumns; i++) {
+                //fieldRows[x] = cropRows[x];//cropRows[x];
+                //System.out.println(x + " " + i );
+                fieldRows[x][i] = cropRows[x].getCropFromRow(i);
+                System.out.println(fieldRows[x][i]);
+            }
+        }
+
+
+    }
+//    public CropRow[][] buildField(CropRow cropRow1, CropRow cropRow2, CropRow cropRow3){
+//        cropRows = new CropRow[][]{
+//                {cropRow1},
+//                {cropRow2},
+//                {cropRow3}
+//        };
 //    }
 
 
+    @Override
+    public String toString() {
+        return "Field{" +
+                "fieldRows=" + Arrays.deepToString(fieldRows) +
+                '}';
+    }
 
-=======
-public class Field {
-    private CropRow[] cropRows;
->>>>>>> abbf4643c4822330c97ec6f3f6d71e5cb2b73083
+    @Override
+    public Edible yields() {
+        return null;
+    }
 }
