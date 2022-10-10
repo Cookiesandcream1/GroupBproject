@@ -3,10 +3,7 @@ package Saad;
 import emily.Crop;
 import emily.CropRow;
 
-public class Botanist extends Person{
+public interface Botanist {
 
-    public void plantCrop(Crop crop, CropRow cropRow){
-
-
-    }
+    void plant(Crop crop, CropRow cropRow);
 }

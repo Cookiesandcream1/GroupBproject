@@ -2,6 +2,15 @@ package Saad;
 
 public abstract class Person{
     private String name;
-    public field;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
 
 }
