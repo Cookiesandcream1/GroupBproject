@@ -1,5 +1,5 @@
 package Vehicles;
 
 public interface FlyAble {
-    void fly();
+    void Flyable();
 }

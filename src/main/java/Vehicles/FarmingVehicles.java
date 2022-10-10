@@ -1,23 +1,36 @@
 package Vehicles;
 
-public class FarmingVehicles extends Vehicle {
-    public boolean canOperate(Vehicle vehicle) {
-        boolean bool = false;
-        if (vehicle instanceof CropDuster) {
-            return true;
-        } else if (vehicle instanceof Tractor) {
-            return true;
-        } else if (vehicle instanceof AirCraft) {
-            return false;
-        }
-        return bool;
+import java.util.Random;
+
+public class FarmingVehicles extends Vehicle{
+    private  boolean onTheFarm;
+
+    public FarmingVehicles() {
+        this.onTheFarm = randomPlaceForVehicle();
     }
 
-    public static void main(String[] args) {
-        FarmingVehicles farmingVehicles = new FarmingVehicles();
+    public boolean randomPlaceForVehicle(){
+        Random rd = new Random();
+        return rd.nextBoolean();
 
-        farmingVehicles.canOperate(farmingVehicles);
+    }
 
+    private boolean canOperate(){
+
+        if (onTheFarm == true){
+            return true;
+        }
+        else {return true;}
+
+    }
+
+    public boolean isOnTheFarm() {
+        return onTheFarm;
+    }
+
+    public void setOnTheFarm(boolean onTheFarm) {
+        this.onTheFarm = onTheFarm;
     }
 }
+
 

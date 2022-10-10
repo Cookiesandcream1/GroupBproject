@@ -1,5 +1,5 @@
 package jared;
 
 public interface Produce {
-    Edible yields()/;
+    Edible yields();
 }
