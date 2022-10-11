@@ -1,25 +1,54 @@
 package Saad;
 
-import isaiahandjoe.Crop;
-import jared.Eater;
+import Vehicles.FlyAble;
+import Vehicles.RideAble;
+import Vehicles.Vehicle;
 import jared.Edible;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
+public class Pilot extends Person implements RideAble {
+    private boolean isMounted;
+    Vehicle vehicle;
+    public Pilot(String name) {
+        super(name);
+    }
 
-public class Pilot extends Person {
+
+
+    public boolean isMounted() {
+        return isMounted;
+    }
+
+    public void setMounted(boolean mounted) {
+        isMounted = mounted;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
 
     @Override
-    public void eat(ArrayList<Crop[]> crops, Eater eater) {
-        Iterator<Crop[]> cropIterator = crops.iterator();
-        while (cropIterator.hasNext()) {
-            Crop[] i = cropIterator.next();
-            crops.remove(i);
-            System.out.println(Arrays.toString(i));
+    public void mount() {
+        if (vehicle instanceof FlyAble){
+            System.out.println("Getting into plane");
+            setMounted(true);
+
         }
+        else if (!(vehicle instanceof FlyAble)){
+            System.out.println("Vehicle not flyable");
     }
 
-
+    @Override
+    public void dismount() {
+        System.out.println("Getting out of plane");
+        setMounted(false);
     }
 
+    @Override
+    public void ride() {
+
+    }
+}

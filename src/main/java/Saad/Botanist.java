@@ -1,27 +1,31 @@
 package Saad;
 
 import isaiahandjoe.Crop;
+import isaiahandjoe.CropRow;
 import jared.Eater;
-import jared.Edible;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
-public class Botanist extends Person implements Eater {
+public class Botanist extends Person {
+    public Botanist(String name) {
+        super(name);
+    }
+
+    @Override
+    public String makeNoise() {
+        return "botanist noises";
+    }
 
     @Override
     public void eat(ArrayList<Crop[]> crops, Eater eater) {
-        Iterator<Crop[]> cropIterator = crops.iterator();
-        while (cropIterator.hasNext()) {
-            Crop[] i = cropIterator.next();
-            crops.remove(i);
-            System.out.println(Arrays.toString(i));
-        }
-
-        //  public
-    }
-
 
     }
 
+    public CropRow plantCropInCropRow(Crop croptype, int numberOfCrops){
+        CropRow cropRow = new CropRow(croptype, numberOfCrops);
+
+        return cropRow;
+
+    }
+
+}

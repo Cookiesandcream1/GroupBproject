@@ -1,24 +1,40 @@
 package Saad;
 
-import isaiahandjoe.Crop;
+import Durran.Farm;
+import Vehicles.RideAble;
+import Vehicles.Vehicle;
 import jared.Eater;
-import jared.Edible;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
+public class Farmer extends Botanist implements Rider, Eater {
+    Vehicle vehicle;
+    Farm farm;
+    private boolean isMounted = false;
 
-public class Farmer implements Eater {
+    public Farmer(String name) {
+        super(name);
+    }
+
+
+    public boolean getIsMounted() {
+        return isMounted;
+    }
+
     @Override
-    public void eat(ArrayList<Crop[]> crops, Eater eater) {
-        Iterator<Crop[]> cropIterator = crops.iterator();
-        while (cropIterator.hasNext()) {
-            Crop[] i = cropIterator.next();
-            crops.remove(i);
-            System.out.println(Arrays.toString(i));
+    public void mount(RideAble ride) {
+
+    }
+
+    @Override
+    public void dismount() {
+        if (vehicle instanceof RideAble) {
+            System.out.println("Mounting..");
+            setMounted(true);
+        }
+        else if (!(vehicle instanceof RideAble)){
+            System.out.println("Not rideable");
+
         }
     }
 
 
-    }
-
+}
